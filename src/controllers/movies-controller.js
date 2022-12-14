@@ -36,7 +36,7 @@ const editMovie = async (req, res) => {
 
     }
     catch (err) {
-        res.status(500).json({ message: "There was an error editing the movie" });
+        res.status(501).json({ message: "There was an error editing the movie" });
     }
 
 
