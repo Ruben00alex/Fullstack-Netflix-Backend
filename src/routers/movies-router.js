@@ -14,7 +14,6 @@ router.get('/', moviesController.getAllMovies);
 //POST /movies
 router.post('/',moviesController.createMovie);
 
-// editar
 //PUT /movies
 router.put('/:id', moviesController.editMovie);
 
