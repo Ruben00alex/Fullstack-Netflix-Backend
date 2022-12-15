@@ -1,57 +1,3 @@
-// const request = require("supertest");
-
-
-//example of desired test
-
-// const { app, server } = require("../src/index");
-
-// afterAll(() => {
-//   server.close();
-// });
-
-// describe("when calling GET /products endpoint", () => {
-//   it("sholud return a 200 status code", async () => {
-//     const response = await request(app).get("/products");
-
-//     expect(response.status).toBe(200);
-//   });
-
-//   it("should return an array of products", async () => {
-//     const response = await request(app).get("/products");
-
-//     expect(response.body).toEqual(
-//       expect.arrayContaining([
-//         expect.objectContaining({
-//           name: expect.any(String),
-//           price: expect.any(Number),
-//         }),
-//       ])
-//     );
-//   });
-// });
-
-// describe("when calling POST /procucts endpoint", () => {
-//   it("should return a 201 status code when a product is created", async () => {
-//     const response = await request(app).post("/products").send({
-//       name: "Cat",
-//       description: "A sad cat",
-//       imageUrl: "",
-//       price: 1000,
-//     });
-
-//     expect(response.status).toBe(200);
-//   });
-// });
-
-// Movie model
-// title: "",
-//     plot: "",
-//     genre: "",
-//     director: "",
-//     year: 0,
-//     cover: "",
-//     runTime: "",
-//     video: "",
 
 const supertest = require("supertest");
 
@@ -72,9 +18,6 @@ describe("when calling GET /movies endpoint", () => {
     it("should return an array of movies", async () => {
         const response = await supertest(app).get("/movies");
 
-
-        // This is what the object in the array should look like
-        // {"__v": 0, "_id": "63943962ac6416593e629a61", "cover": "https://i.ytimg.com/vi/8hYlB38asDY/maxresdefault.jpg", "director": "Jon Favreau", "genre": ["Action", "Adventure", "Sci-Fi"], "plot": "A billionaire industrialist and genius inventor, Tony Stark, is conducting weapons tests overseas when he is attacked and captured", "runTime": "126 min", "title": "Iron Man", "video": "https://www.youtube.com/watch?v=8hYlB38asDY", "year": 2008}
         expect(response.body).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({

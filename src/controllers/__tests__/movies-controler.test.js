@@ -7,18 +7,6 @@ const MovieService = require('../../services/movies-service');
 
 jest.mock('../../services/movies-service');
 
-// title: "",
-//     plot: "",
-//     genre: "",
-//     director: "",
-//     year: 0,
-//     cover: "",
-//     runTime: "",
-//     video: "",
-
-
-
-
 
 describe('when adding a movie', () => {
     let movie, req, res;
